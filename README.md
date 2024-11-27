@@ -34,15 +34,15 @@ Incremental validation ensures robust input handling, and leveraging ASCII check
 Accepts five single-digit integers from the user, stores them in an array, reverses the array, and outputs the reversed order.
 
 ### Instructions
-1.Compile the code using NASM:
+1. Compile the code using NASM:
+   ```bash
+   nasm -f elf64 task2.asm -o task2.o
+   ld task2.o -o task2
 
-```bash
-nasm -f elf64 task2.asm -o task2.o
-ld task2.o -o task2
+2. Run the program:
 
-2.Run the program:
-```bash
-./task2
+   ```bash
+   ./task2
 
 ### Insights and Challenges
 
