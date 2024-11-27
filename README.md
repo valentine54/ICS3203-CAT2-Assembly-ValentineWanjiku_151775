@@ -23,10 +23,10 @@ Classifies user input as:
    ```bash
    ./task1
 
-### Insights and Challenges
-## Challenge: 
+## Insights and Challenges
+### Challenge: 
 Handling invalid inputs such as empty strings or non-numeric characters.
-## Insight: 
+### Insight: 
 Incremental validation ensures robust input handling, and leveraging ASCII checks ('0'-'9') simplifies digit verification.
 
 ## Task 2: Array Manipulation and Reversal
@@ -44,42 +44,45 @@ Accepts five single-digit integers from the user, stores them in an array, rever
    ```bash
    ./task2
 
-### Insights and Challenges
+## Insights and Challenges
 
-## Challenge:
+### Challenge:
 Parsing the input correctly to extract digits and handle spaces or invalid characters.
-## Insight:
+### Insight:
  The use of a two-pointer approach for reversal (swapping elements from start and end) makes the implementation efficient.
 
-## Task 3: Array Manipulation with Extended Functionality
+### Task 3: Array Manipulation with Extended Functionality
 
-### Purpose
+## Purpose
 Similar to Task 2, this program accepts five single-digit integers, reverses their order, and prints the reversed array. It also handles invalid inputs with detailed error messages.
 
-### Instructions
+## Instructions
 1. Compile the code using NASM:
    ```bash
    nasm -f elf64 task3.asm -o task3.o
    ld task3.o -o task3
 
 2. Run the program:
+   ```bash 
    ./task3
    
-### Insights and Challenges
- ## Challenge: 
+## Insights and Challenges
+ ### Challenge: 
  Improving the error-handling mechanism for incomplete 
  or invalid input.
  
-## Insight:
+### Insight:
  
  Modular design helps isolate parsing, reversal, and 
  output logic for better maintainability.
    
-### Common Compilation and Execution Notes
+## Common Compilation and Execution Notes
  Ensure you have the NASM assembler and GCC linker 
  installed.
+ 
  For Linux-based systems, use int 0x80 syscall 
  conventions for system calls.
+ 
  Test the program in a terminal/console for proper 
  interaction.
 
