@@ -17,11 +17,11 @@ Classifies user input as:
 ### Instructions
 1. Compile the code using NASM:
    ```bash
-   nasm -f elf64 task1.asm -o task1.o
-   ld task1.o -o task1
+   nasm -f elf64 control_flow.asm -o control_flow.o
+   ld control_flow.o -o control_flow
 2. Run the program:
    ```bash
-   ./task1
+   ./control_flow
 
 ## Insights and Challenges
 ### Challenge: 
@@ -36,13 +36,13 @@ Accepts five single-digit integers from the user, stores them in an array, rever
 ### Instructions
 1. Compile the code using NASM:
    ```bash
-   nasm -f elf64 task2.asm -o task2.o
-   ld task2.o -o task2
+   nasm -f elf64 array_reverse.asm -o array_reverse.o
+   ld array_reverse.o -o array_reverse
 
 2. Run the program:
 
    ```bash
-   ./task2
+   ./array_reverse
 
 ## Insights and Challenges
 
@@ -51,39 +51,69 @@ Parsing the input correctly to extract digits and handle spaces or invalid chara
 ### Insight:
  The use of a two-pointer approach for reversal (swapping elements from start and end) makes the implementation efficient.
 
-### Task 3: Array Manipulation with Extended Functionality
+### Task 3: Modular Program with Subroutines for Factorial Calculation
 
 ## Purpose
-Similar to Task 2, this program accepts five single-digit integers, reverses their order, and prints the reversed array. It also handles invalid inputs with detailed error messages.
+This program calculates the factorial of a number entered by the user, using a modular approach with subroutines. The program demonstrates stack usage for register preservation and restores the values after the calculation.
 
 ## Instructions
 1. Compile the code using NASM:
    ```bash
-   nasm -f elf64 task3.asm -o task3.o
-   ld task3.o -o task3
+   nasm -f elf64 factorial.asm -o factorial.o
+   ld factorial.o -o factorial
 
 2. Run the program:
    ```bash 
-   ./task3
+   ./factorial
    
 ## Insights and Challenges
  ### Challenge: 
- Improving the error-handling mechanism for incomplete 
- or invalid input.
- 
+ The challenge was managing the stack to preserve the values of registers 
+ across subroutine calls.
+ Ensuring that the appropriate registers (RAX, RBX, etc.) are preserved and 
+ restored correctly was a key challenge to maintain program stability.
+
 ### Insight:
  
  Modular design helps isolate parsing, reversal, and 
  output logic for better maintainability.
    
-## Common Compilation and Execution Notes
- Ensure you have the NASM assembler and GCC linker 
- installed.
+### Task 4:  Data Monitoring and Control Using Port-Based Simulation
+
+## Purpose
+This program simulates a control system based on sensor input. The sensor value is read, and based on the level, the program performs different actions such as turning a motor on/off and triggering an alarm.
+
+## Instructions
+1. Compile the code using NASM:
+   ```bash
+   nasm -f elf64 port_control.asm -o port_control.o
+   ld port_control.o -o port_control
+
+2. Run the program:
+   ```bash 
+   ./port_control
+   
+## Insights and Challenges
+ ### Challenge: 
+ The challenge was ensuring the correct motor and alarm actions were 
+ triggered based on the sensor value, which involved direct manipulation of 
+ memory locations.
+
+### Insight:
  
- For Linux-based systems, use int 0x80 syscall 
- conventions for system calls.
+ Handling simulated input for the sensor and performing conditional checks 
+ for high, moderate, and low levels required careful structuring.
+
+ Simulating ports and memory addresses in assembly language can be tricky 
+ since no physical hardware is involved, so proper abstraction and careful 
+ coding were crucial.
+
+   
+
  
- Test the program in a terminal/console for proper 
- interaction.
+
+
+
+ 
 
 
