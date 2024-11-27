@@ -56,5 +56,31 @@ Parsing the input correctly to extract digits and handle spaces or invalid chara
 ### Purpose
 Similar to Task 2, this program accepts five single-digit integers, reverses their order, and prints the reversed array. It also handles invalid inputs with detailed error messages.
 
-##Instructions
-1.Compile the code using NASM:
+### Instructions
+1. Compile the code using NASM:
+   ```bash
+   nasm -f elf64 task3.asm -o task3.o
+   ld task3.o -o task3
+
+2. Run the program:
+   ./task3
+   
+### Insights and Challenges
+ ## Challenge: 
+ Improving the error-handling mechanism for incomplete 
+ or invalid input.
+ 
+## Insight:
+ 
+ Modular design helps isolate parsing, reversal, and 
+ output logic for better maintainability.
+   
+### Common Compilation and Execution Notes
+ Ensure you have the NASM assembler and GCC linker 
+ installed.
+ For Linux-based systems, use int 0x80 syscall 
+ conventions for system calls.
+ Test the program in a terminal/console for proper 
+ interaction.
+
+
